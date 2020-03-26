@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTitle"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/title_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="@drawable/ic_comeback"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:text="答题页面"
+        android:textColor="#fff"
+        android:textSize="24dp" />
+
+    <TextView
+        android:layout_weight="1"
+        android:textColor="#0fc"
+        android:id="@+id/showscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+
+         />
+</LinearLayout>

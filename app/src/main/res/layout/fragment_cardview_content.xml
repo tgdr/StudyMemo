@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="5dp">
+
+    <androidx.cardview.widget.CardView
+
+
+        android:id="@+id/cv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+
+        app:contentPadding="15dp"
+        android:paddingTop="15dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="20dp"
+        app:cardPreventCornerOverlap="true"
+        android:stateListAnimator="@drawable/z_translation"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <buu.njj.studymemo.defui.SelectableRoundedImageView
+                    android:layout_width="16dp"
+                    android:id="@+id/img_card_status"
+                    android:scaleType="fitXY"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/icon_wait" />
+
+                <TextView
+                    android:layout_weight="2"
+                    android:id="@+id/tv_card_quetype"
+                    android:layout_gravity="center"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="简答题" />
+
+                <TextView
+                    android:id="@+id/tv_card_questatus"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:text="N/A" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dp"
+                android:background="#CDC0B8"
+                android:layout_width="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_card_que_num"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40dp"
+                    android:text="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:id="@+id/tv_card_que_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize = "marquee"
+                        android:text="N/A"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:textSize="15dp" />
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:layout_marginTop="3dp">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tv_card_course_time"-->
+<!--                            android:layout_marginTop="3dp"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="08:00-9:30"-->
+<!--                            android:layout_marginLeft="10dp"-->
+
+<!--                            android:textSize="15dp" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tv_card_course_position"-->
+<!--                            android:textSize="15dp"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:layout_marginLeft="15dp"-->
+<!--                            android:layout_gravity="bottom"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="综合实训楼7A-7005" />-->
+
+<!--                    </LinearLayout>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/checkpiliang"
+                        android:visibility="invisible"
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_card_chapter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="right"
+                        android:text="第一章"
+
+                        android:textSize="10dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

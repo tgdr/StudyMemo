@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">StudyMemo</string>
+    <string name="title_home">主页</string>
+    <string name="title_dashboard">功能大全</string>
+    <string name="title_notifications">错题本</string>
+    <string name="strme">我</string>
+    <string name="login_register_hint">注册</string>
+    <string name="register_input_username_hint">请输入您的手机号</string>
+    <string name="register_password">请输入密码</string>
+    <string name="register_nick_name">请输入您的姓名</string>
+    <string name="login">登录</string>
+    <string name="login_hold_hint">自动登录</string>
+    <string name="login_forget_hint">忘记密码</string>
+    <string name="title_simulate">模拟考试</string>
+</resources>

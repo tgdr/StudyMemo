@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff0000</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="green">#1100ac00</color>
+    <color name="green_dark">#001f00</color>
+    <color name="account_input_bg_color">#33ffffff</color>
+
+    <color name="account_lock_bg">#ff43815c</color>
+    <color name="account_input_color">#c9c9c9</color>
+    <color name="account_lock_font_color">#FF68997C</color>
+    <color name="account_pressed_true">#14b94d</color>
+    <color name="white">#ffffffff</color>
+    <color name="colorTitle">#fa964b00</color>
+
+
+    <!--登录界面线的颜色 -->
+    <color name="login_line_color">#dededf</color>
+    <color name="login_other_color">#cacaca</color>
+    <color name="login_input_active">#31b968</color>
+    <color name="swiperefresh_color4">#ffaa66cc</color>
+    <color name="text_secondary_color">#9d9d9d</color>
+    <color name="black_alpha_128">#80000000</color>
+    <color name="transparent">#00000000</color>
+
+</resources>
