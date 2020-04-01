@@ -29,7 +29,7 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import buu.njj.studymemo.R;
-import buu.njj.studymemo.fragment.QrCodeDialog;
+import buu.njj.studymemo.ui.fragment.QrCodeDialog;
 import buu.njj.studymemo.ui.activity.AccountSafeActivity;
 import buu.njj.studymemo.utils.GridShowUtil;
 import jp.wasabeef.glide.transformations.BlurTransformation;

@@ -1,11 +1,13 @@
 package buu.njj.studymemo.ui.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -36,11 +38,23 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher {
     EditText editusername;
     @BindView(R.id.et_login_pwd)
     EditText editpassword;
+    @BindView(R.id.cb_remember_login)
+    CheckBox cbauto;
+    SharedPreferences spf;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_login);
         app = (StudyApplication) getApplication();
+        spf = app.getSpf();
+        if(spf.getString("username",null) !=null && spf.getString("password",null)!=null &&!spf.getString("username","").equals("")&&!spf.getString("password","").equals("")&&spf.getString("AUTOLOGIN","").equals("true")) {
+            app.setUserName(spf.getString("username",""));
+
+            Intent it = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(it);
+            finish();
+        }
+        setContentView(R.layout.activity_main_login);
+
         ButterKnife.bind(this);
         editusername.addTextChangedListener(this);
         editpassword.addTextChangedListener(this);
@@ -71,6 +85,12 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher {
     @Subscribe(threadMode = ThreadMode.MAIN_ORDERED)
     public void getReturnData(Boolean b){
         if(b){
+            if (cbauto.isChecked() == true) {
+                app.getEditor().putString("AUTOLOGIN", "true").putString("username", editusername.getText().toString()).putString("password", editpassword.getText().toString()).commit();
+
+            } else {
+                app.getEditor().putString("AUTOLOGIN", "true").commit();
+            }
             Toast.makeText(app, "欢迎回来", Toast.LENGTH_SHORT).show();
             app.setUserName(editusername.getText().toString());
             Intent it = new Intent(LoginActivity.this, MainActivity.class);

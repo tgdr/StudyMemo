@@ -190,14 +190,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public CardViewHolder(View itemView) {
             super(itemView);
             piliangdata = new HashMap();
-            piliang = itemView.findViewById(R.id.checkpiliang);
+         //   piliang = itemView.findViewById(R.id.checkpiliang);
             cardView = itemView.findViewById(R.id.cv1);
             cardImage = itemView.findViewById(R.id.img_card_status);
             tv_quetitle = itemView.findViewById(R.id.tv_card_que_title);
             tv_quenum = itemView.findViewById(R.id.tv_card_que_num);
             tv_questatus = itemView.findViewById(R.id.tv_card_questatus);
             tv_quetype = itemView.findViewById(R.id.tv_card_quetype);
-            tv_quechapter = itemView.findViewById(R.id.tv_card_chapter);
+           // tv_quechapter = itemView.findViewById(R.id.tv_card_chapter);
         }
     }
 

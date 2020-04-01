@@ -1,4 +1,4 @@
-package buu.njj.studymemo.fragment;
+package buu.njj.studymemo.ui.fragment;
 
 
 import android.app.Dialog;

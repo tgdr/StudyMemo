@@ -68,7 +68,7 @@ public class UserInfoDBhelper {
     }
 
 
-    public static List getUserStudyType(String phoneNum) throws SQLException {
+    public static List<GridSubject> getUserStudyType(String phoneNum) throws SQLException {
         String sqlstatment ="select  study_type.type_id,study_type.type_msg,study_type.type_img,study_type.type_table from user_study_type,study_type where user_study_type.phoneNum='" +phoneNum+
                 "' and user_study_type.type_id = study_type.type_id;";
         Statement statement = getSQLConnection().createStatement();

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:contentPadding="15dp"
+            android:paddingTop="15dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="20dp"
+            app:cardPreventCornerOverlap="true"
+            android:stateListAnimator="@drawable/z_translation"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <buu.njj.studymemo.defui.SelectableRoundedImageView
+                        android:layout_width="16dp"
+                        android:id="@+id/img_card_status"
+                        android:scaleType="fitXY"
+                        android:layout_height="16dp"
+                        android:src="@mipmap/icon_wait" />
+
+                    <TextView
+                        android:layout_weight="2"
+                        android:id="@+id/tv_card_quetype"
+                        android:layout_gravity="center"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="简答题" />
+
+                    <TextView
+                        android:id="@+id/tv_card_chapter"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:text="N/A" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_height="1dp"
+                    android:background="#CDC0B8"
+                    android:layout_width="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_card_que_num"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="40dp"
+                        android:text="1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:orientation="vertical">
+
+                        <buu.njj.studymemo.defui.SpannableFoldTextView
+
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:id="@+id/tv_card_que_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:showMaxLine="4"
+                            app:showTipAfterExpand="true"
+                            app:tipClickable="true"
+                            app:tipColor="@color/colorPrimary"
+                            app:tipGravity="1"
+                            android:text=""
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold"
+                            android:textSize="15dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            app:met_floatingLabel="highlight"
+            app:met_helperText="最多输入2500字，请你言简意赅作答问题！"
+            app:met_minCharacters="1"
+            app:met_maxCharacters="2500"
+            android:hint="请在此输入你的答案！"
+            android:maxLength="2500"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_reason_input"
+            android:id="@+id/etinput"
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_weight="85"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+
+
+</ScrollView>

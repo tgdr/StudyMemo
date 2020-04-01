@@ -12,4 +12,5 @@
     <string name="login_hold_hint">自动登录</string>
     <string name="login_forget_hint">忘记密码</string>
     <string name="title_simulate">模拟考试</string>
+
 </resources>

@@ -1,4 +1,4 @@
-package buu.njj.studymemo.fragment;
+package buu.njj.studymemo.ui.fragment;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
