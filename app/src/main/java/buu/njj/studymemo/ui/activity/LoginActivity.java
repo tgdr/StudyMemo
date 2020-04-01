@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher {
         spf = app.getSpf();
         if(spf.getString("username",null) !=null && spf.getString("password",null)!=null &&!spf.getString("username","").equals("")&&!spf.getString("password","").equals("")&&spf.getString("AUTOLOGIN","").equals("true")) {
             app.setUserName(spf.getString("username",""));
-
+            Toast.makeText(app, "欢迎回来", Toast.LENGTH_SHORT).show();
             Intent it = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(it);
             finish();
